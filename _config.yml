@@ -1,0 +1,16 @@
+title: Vibezzzz
+description: Describe a vibe. Get movies, shows, books, and games that match.
+theme: jekyll-theme-primer
+
+# This site is three static pages of prose. There are no posts, no collections, and
+# deliberately no plugins beyond the theme.
+#
+# Each page sets its own `permalink`, so the published URLs are exactly:
+#   https://amittal2001.github.io/vibezzzz-legal/
+#   https://amittal2001.github.io/vibezzzz-legal/privacy/
+#   https://amittal2001.github.io/vibezzzz-legal/disclosure/
+# Those URLs are pasted into store forms and affiliate applications. Do not change a
+# permalink once it has been submitted anywhere.
+
+exclude:
+  - README.md
