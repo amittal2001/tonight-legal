@@ -31,6 +31,35 @@
       </div>
     </header>
 
+    {%- comment -%}
+      The landing page opens with a brand hero; the two policy pages deliberately do
+      not. Their readers are store reviewers, and on a privacy policy or an FTC
+      disclosure, restraint is the credibility signal.
+    {%- endcomment -%}
+    {%- if page.hero %}
+    <div class="hero">
+      <div class="wrap hero__inner">
+        <h1 class="page__title">{{ page.heading | default: page.title }}</h1>
+        {%- if page.lede %}
+        <p class="lede">{{ page.lede }}</p>
+        {%- endif %}
+        {%- if page.examples %}
+        <div class="try">
+          <span class="try__label">Try</span>
+          <ul class="chips">
+            {%- for example in page.examples %}
+            <li>{{ example }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+
+    <main id="content" class="wrap page page--after-hero">
+      {{ content }}
+    </main>
+    {%- else %}
     <main id="content" class="wrap page">
       <h1 class="page__title">{{ page.heading | default: page.title }}</h1>
       {%- if page.lede %}
@@ -42,6 +71,7 @@
 
       {{ content }}
     </main>
+    {%- endif %}
 
     <footer class="site-footer">
       <div class="wrap site-footer__inner">

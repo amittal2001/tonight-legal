@@ -1,11 +1,14 @@
 ---
 title: Vibezzzz
+hero: true
 heading: Describe a vibe. Get five things to watch, read, or play.
 lede: >-
   Vibezzzz is a free Android app that recommends movies, TV series, books, and video games from a
-  sentence of plain description — "cosy fantasy, nothing scary", "slow-burn sci-fi under two hours",
-  "something funny to fall asleep to" — rather than from a genre menu.
-updated: 25 September 2026
+  sentence of plain description, rather than from a genre menu.
+examples:
+  - cosy fantasy, nothing scary
+  - slow-burn sci-fi under two hours
+  - something funny to fall asleep to
 ---
 
 ## How it works

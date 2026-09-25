@@ -25,7 +25,8 @@ nowhere else.
 
 | File | |
 |---|---|
-| `index.md`, `privacy.md`, `disclosure.md` | the three pages — prose in Markdown, with the title, lede, and date in front matter |
+| `index.md` | the landing page. `hero: true` in its front matter gives it the coloured banner, the large `heading:`, and the `examples:` chips |
+| `privacy.md`, `disclosure.md` | the two policy pages — prose in Markdown, with `title:`, `permalink:`, and `updated:` in front matter. No hero: their readers are store reviewers, and restraint reads as credibility |
 | `_layouts/default.html` | the shared page shell: header, nav, footer |
 | `assets/css/style.css` | the whole design, hand-written, light and dark |
 | `assets/favicon.svg` | the mark, used as both favicon and header logo |
@@ -35,8 +36,10 @@ There is **no Jekyll theme**, so nothing here depends on an upstream project's m
 There is also no JavaScript, no web font, and no third-party request of any kind — a privacy page that
 phoned home to a font CDN would undercut the thing it claims. Keep it that way.
 
-Change the **"Last updated"** date (`updated:` in the front matter) in any page you edit — store
-reviewers and the FTC both care that a published policy matches the shipped build.
+Change the **"Last updated"** date (`updated:` in the front matter) whenever you edit `privacy.md` or
+`disclosure.md` — store reviewers and the FTC both care that a published policy matches the shipped
+build. The landing page carries no date, because a stale date on it would say nothing and an accurate
+one would need touching on every wording tweak.
 
 Two `POST-LAUNCH` comments in `index.md` and `disclosure.md` mark the only edits that are waiting on
 the Google Play release.

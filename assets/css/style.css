@@ -10,8 +10,17 @@
   --bg-soft: #f6f7f9;
   --bg-sunken: #f0f2f5;
   --rule: #e2e5ea;
+
+  /* --brand is the mark's own indigo, and is what every decorative stroke uses, so
+     nothing next to the logo is a near-miss of it. --accent is a step darker and is
+     used only for link text, where 4.5:1 against the page matters more than an exact
+     match. --brand-2 is the teal end of the mark's gradient and appears nowhere but
+     the hero wash. */
+  --brand: #6d5ce7;
+  --brand-2: #3fb0c9;
   --accent: #5a49d6;
   --accent-soft: #eeecfb;
+
   --radius: 10px;
   --wrap: 46rem;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
@@ -28,6 +37,8 @@
     --bg-soft: #1b1d23;
     --bg-sunken: #21242b;
     --rule: #2c2f38;
+    --brand: #8d7dff;
+    --brand-2: #54c2d9;
     --accent: #a99bff;
     --accent-soft: #23213a;
   }
@@ -77,7 +88,7 @@ body {
   top: 0;
   z-index: 10;
   padding: 0.6rem 1rem;
-  background: var(--accent);
+  background: var(--brand);
   color: #fff;
   border-radius: 0 0 var(--radius) 0;
   text-decoration: none;
@@ -144,7 +155,85 @@ body {
 .site-nav a[aria-current="page"] {
   color: var(--ink);
   font-weight: 600;
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--brand);
+}
+
+/* ---------- Hero: the landing page only ---------- */
+
+.hero {
+  background:
+    radial-gradient(120% 140% at 12% 0%, rgba(109, 92, 231, 0.13), rgba(109, 92, 231, 0) 58%),
+    radial-gradient(90% 120% at 92% 8%, rgba(63, 176, 201, 0.12), rgba(63, 176, 201, 0) 60%),
+    var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero {
+    background:
+      radial-gradient(120% 140% at 12% 0%, rgba(141, 125, 255, 0.2), rgba(141, 125, 255, 0) 58%),
+      radial-gradient(90% 120% at 92% 8%, rgba(84, 194, 217, 0.14), rgba(84, 194, 217, 0) 60%),
+      var(--bg);
+  }
+}
+
+.hero__inner {
+  padding-top: 4rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero__inner .page__title {
+  margin-bottom: 1.1rem;
+}
+
+.hero__inner .lede {
+  margin-bottom: 2rem;
+  max-width: 34rem;
+}
+
+/* The three example queries. They are the clearest statement of what you type into
+   the app that is possible without a screenshot. */
+.try {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.try__label {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  margin: 0;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(16, 17, 29, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .chips li {
+    background: var(--bg-soft);
+    box-shadow: none;
+  }
 }
 
 /* ---------- Page ---------- */
@@ -153,6 +242,14 @@ body {
   flex: 1 0 auto;
   padding-top: 3.5rem;
   padding-bottom: 4.5rem;
+}
+
+.page--after-hero {
+  padding-top: 2.75rem;
+}
+
+.page--after-hero > h2:first-child {
+  margin-top: 0;
 }
 
 .page__title {
@@ -253,7 +350,7 @@ blockquote {
   padding: 1.15rem 1.35rem;
   background: var(--bg-soft);
   border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--brand);
   border-radius: var(--radius);
   color: var(--ink);
 }
@@ -302,6 +399,15 @@ td {
 th {
   font-weight: 650;
   background: var(--bg-soft);
+  border-bottom: 2px solid var(--rule);
+}
+
+thead th:first-child {
+  border-top-left-radius: 6px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 6px;
 }
 
 /* ---------- Footer ---------- */
