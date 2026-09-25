@@ -1,14 +1,14 @@
 ---
-title: Vibezzzz Privacy Policy
+title: Privacy Policy
 permalink: /privacy/
+updated: 25 September 2026
+description: >-
+  Vibezzzz collects nothing about you. There is no account, no analytics, and no server of ours to
+  send anything to. What you type never leaves your phone.
 ---
 
-# Privacy Policy
-
-*Last updated: 25 September 2026*
-
-**The short version: Vibezzzz collects nothing about you. There is no account, no analytics, and no
-server of ours to send anything to. What you type never leaves your phone.**
+> **The short version: Vibezzzz collects nothing about you. There is no account, no analytics, and no
+> server of ours to send anything to. What you type never leaves your phone.**
 
 This policy covers the Vibezzzz Android app and this website. It is written to describe the app that
 is actually shipped, and it is updated whenever that changes.
@@ -91,7 +91,8 @@ anything in this app. Those reports contain no user content from Vibezzzz.
 These pages are hosted on GitHub Pages. GitHub serves them and may log requests, including IP
 addresses, as described in the
 [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-We add no cookies, no tags, and no analytics of our own, and we receive no visitor data.
+We add no cookies, no tags, no analytics, and no third-party fonts or scripts of any kind, and we
+receive no visitor data.
 
 ## Children
 
@@ -111,4 +112,4 @@ too. A change that affected what the app transmits would be announced in the app
 
 ## Contact
 
-**talamit2001@gmail.com**
+**[talamit2001@gmail.com](mailto:talamit2001@gmail.com)**

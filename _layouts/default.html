@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <meta name="theme-color" content="#6d5ce7">
+    <!-- No analytics, no tag manager, no web font CDN, no third-party request of any
+         kind. A privacy policy that phoned home to a font host would be a poor
+         advertisement for the app it describes. The type is the reader's own system
+         font, which also means these pages render instantly. -->
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap site-header__bar">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img class="brand__mark" src="{{ '/assets/favicon.svg' | relative_url }}" alt="" width="28" height="28">
+          <span class="brand__name">{{ site.title }}</span>
+        </a>
+        <nav class="site-nav" aria-label="Pages">
+          {%- assign nav = "/,Overview|/privacy/,Privacy|/disclosure/,Disclosure" | split: "|" -%}
+          {%- for entry in nav -%}
+            {%- assign parts = entry | split: "," -%}
+            <a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
+          {%- endfor -%}
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="wrap page">
+      <h1 class="page__title">{{ page.heading | default: page.title }}</h1>
+      {%- if page.lede %}
+      <p class="lede">{{ page.lede }}</p>
+      {%- endif %}
+      {%- if page.updated %}
+      <p class="page__meta">Last updated {{ page.updated }}</p>
+      {%- endif %}
+
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="site-footer__links" aria-label="Footer">
+          <a href="{{ '/' | relative_url }}">Overview</a>
+          <a href="{{ '/privacy/' | relative_url }}">Privacy policy</a>
+          <a href="{{ '/disclosure/' | relative_url }}">Affiliate disclosure</a>
+        </nav>
+        <p class="site-footer__note">
+          {{ site.title }} is built by one independent developer.
+          <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

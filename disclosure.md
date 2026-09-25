@@ -1,14 +1,14 @@
 ---
-title: Vibezzzz Affiliate Disclosure
+title: Affiliate Disclosure
 permalink: /disclosure/
+updated: 25 September 2026
+description: >-
+  Vibezzzz earns a commission on some of the links it shows. What it recommends is never affected by
+  that.
 ---
 
-# Affiliate Disclosure
-
-*Last updated: 25 September 2026*
-
-**Vibezzzz earns a commission on some of the links it shows. What it recommends is never affected by
-that.**
+> **Vibezzzz earns a commission on some of the links it shows. What it recommends is never affected by
+> that.**
 
 Vibezzzz is free, shows no advertising, and sells nothing. It is funded by affiliate links: when you
 choose to open a title on a streaming service or in a store, that service may pay us a referral fee
@@ -79,4 +79,5 @@ is not worth making.
 
 ## Contact
 
-Questions about how any of this works: **talamit2001@gmail.com**
+Questions about how any of this works:
+**[talamit2001@gmail.com](mailto:talamit2001@gmail.com)**

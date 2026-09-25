@@ -23,9 +23,20 @@ nowhere else.
 
 ## Editing
 
-`index.md`, `privacy.md`, and `disclosure.md` are the three pages; `_config.yml` sets the theme and
-nothing else. Change the **"Last updated"** date in any page you edit — store reviewers and the FTC
-both care that a published policy matches the shipped build.
+| File | |
+|---|---|
+| `index.md`, `privacy.md`, `disclosure.md` | the three pages — prose in Markdown, with the title, lede, and date in front matter |
+| `_layouts/default.html` | the shared page shell: header, nav, footer |
+| `assets/css/style.css` | the whole design, hand-written, light and dark |
+| `assets/favicon.svg` | the mark, used as both favicon and header logo |
+| `_config.yml` | site metadata, the `jekyll-seo-tag` plugin, and the default layout |
+
+There is **no Jekyll theme**, so nothing here depends on an upstream project's markup or class names.
+There is also no JavaScript, no web font, and no third-party request of any kind — a privacy page that
+phoned home to a font CDN would undercut the thing it claims. Keep it that way.
+
+Change the **"Last updated"** date (`updated:` in the front matter) in any page you edit — store
+reviewers and the FTC both care that a published policy matches the shipped build.
 
 Two `POST-LAUNCH` comments in `index.md` and `disclosure.md` mark the only edits that are waiting on
 the Google Play release.

@@ -1,14 +1,12 @@
 ---
 title: Vibezzzz
+heading: Describe a vibe. Get five things to watch, read, or play.
+lede: >-
+  Vibezzzz is a free Android app that recommends movies, TV series, books, and video games from a
+  sentence of plain description — "cosy fantasy, nothing scary", "slow-burn sci-fi under two hours",
+  "something funny to fall asleep to" — rather than from a genre menu.
+updated: 25 September 2026
 ---
-
-# Vibezzzz
-
-**Describe a vibe. Get five things to watch, read, or play.**
-
-Vibezzzz is a free Android app that recommends movies, TV series, books, and video games from a
-sentence of plain description — *"cosy fantasy, nothing scary"*, *"slow-burn sci-fi under two hours"*,
-*"something funny to fall asleep to"* — rather than from a genre menu.
 
 ## How it works
 
@@ -34,11 +32,11 @@ Vibezzzz displays metadata from public APIs, cached into a static catalog that i
 app makes **no per-search request** to any of them: it queries only its own local copy. Attribution
 for each source is displayed inside the app.
 
-- **Movies and TV** — titles, release metadata, artwork, and streaming availability from
-  [The Movie Database (TMDB)](https://www.themoviedb.org/). TMDB's watch-provider data is supplied by
-  [JustWatch](https://www.justwatch.com/).
-- **Video games** — titles and metadata from [IGDB](https://www.igdb.com/).
-- **Books** — titles and metadata from [Google Books](https://books.google.com/).
+| Media | Source |
+|---|---|
+| Movies and TV | [The Movie Database (TMDB)](https://www.themoviedb.org/) — titles, release metadata, artwork, and streaming availability. TMDB's watch-provider data is supplied by [JustWatch](https://www.justwatch.com/). |
+| Video games | [IGDB](https://www.igdb.com/) |
+| Books | [Google Books](https://books.google.com/) |
 
 This product uses the TMDB API but is not endorsed or certified by TMDB.
 
@@ -68,6 +66,4 @@ Android, via Google Play. iOS is planned after the Android release.
 ## Contact
 
 Vibezzzz is built by one independent developer. Questions about privacy, licensing, or the affiliate
-programme: **talamit2001@gmail.com**.
-
-*Last updated: 25 September 2026*
+programme: **[talamit2001@gmail.com](mailto:talamit2001@gmail.com)**.
