@@ -1,36 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Tonight">
-  <!-- The Tonight mark: a waveform Z, on the same dark plate the Android launcher icon
-       uses. This is the THIRD hand-maintained copy of the geometry, after
-       lib/ui/common/logo.dart in the app and tool/make_logo_assets.py in the pipeline
-       repo, and it is the one no contract test can reach, because it lives in a
-       different repository. logo.dart is the source of truth; every number below is one
-       of its unit coordinates times 32:
+  <!-- The Tonight mark, on the launcher plate, so a browser tab matches the installed
+       icon. This is the THIRD hand-maintained copy of the geometry: the app draws it in
+       lib/ui/common/logo.dart, tool/make_logo_assets.py bakes it into the Android PNGs,
+       and this file is the one no contract test can reach; the other two are pinned
+       against each other by tests/test_dart_logo_contract.py.
 
-         stroke width  2 x 0.060 x 32 = 3.84, round caps and joins
-         top bar       (0.28, 0.200) to (0.72, 0.200)
-         bottom bar    (0.28, 0.800) to (0.72, 0.800)
-         rise          cubic (0.710, 0.360) (0.545, 0.395) (0.455, 0.605) (0.290, 0.640)
-         plate radius  0.225 x 32 = 7.2
-
-       The plate gradient runs top left to bottom right and the mark's runs bottom left
-       to top right, exactly as in BrandAppIcon, so the drawn mark and the installed
-       icon are lit from the same direction. If the mark ever changes, it changes in
-       four places and this is the one that will be forgotten. -->
+       Every number below is that geometry times this 32px viewBox, with the launcher's
+       0.88 fill applied (so the unit square maps onto a centred 28.16px box):
+         bars at x 0.140 / 0.290 / 0.440, reaching 0.080 / 0.150 / 0.220 either side of
+         the midline, stroked 2 x 0.050 x 28.16 = 2.816 wide with round caps;
+         the triangle's polyline at (0.595, 0.230), (0.595, 0.770), (0.865, 0.500),
+         filled and stroked 2 x 0.030 x 28.16 = 1.6896 with a round join, which is what
+         rounds its corners to match the caps;
+         plate corner 0.225 x 32 = 7.2.
+       Re-run `python tool/make_logo_assets.py` in the app repo after any change there,
+       then redo the arithmetic here: nothing will tell you this file went stale. -->
   <defs>
     <linearGradient id="plate" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#221B1E"/>
-      <stop offset="0.5" stop-color="#14121B"/>
-      <stop offset="1" stop-color="#1A182B"/>
+      <stop offset="0" stop-color="#221B1E"/><stop offset="0.5" stop-color="#14121B"/><stop offset="1" stop-color="#1A182B"/>
     </linearGradient>
-    <linearGradient id="mark" x1="0" y1="32" x2="32" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#C98A2E"/>
-      <stop offset="1" stop-color="#FFDD96"/>
+    <!-- Left to right, dim to bright: the mark reads in that direction and is lit along
+         it, which is also how the baked PNGs are rasterised. -->
+    <linearGradient id="mark" x1="0" y1="16" x2="32" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C98A2E"/><stop offset="1" stop-color="#FFDD96"/>
     </linearGradient>
   </defs>
   <rect width="32" height="32" rx="7.2" fill="url(#plate)"/>
-  <g fill="none" stroke="url(#mark)" stroke-width="3.84" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M8.96 6.4H23.04"/>
-    <path d="M8.96 25.6H23.04"/>
-    <path d="M22.72 11.52C17.44 12.64 14.56 19.36 9.28 20.48"/>
+  <g stroke="url(#mark)" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke-width="2.816">
+      <path d="M5.8624 13.7472V18.2528"/>
+      <path d="M10.0864 11.776V20.224"/>
+      <path d="M14.3104 9.8048V22.1952"/>
+    </g>
+    <path d="M18.6752 8.3968L18.6752 23.6032L26.2784 16Z" fill="url(#mark)" stroke-width="1.6896"/>
   </g>
 </svg>
