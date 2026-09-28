@@ -1,9 +1,9 @@
 ---
-title: Vibezzzz
+title: Tonight
 hero: true
 heading: Describe a vibe. Get five things to watch, read, or play.
 lede: >-
-  Vibezzzz is a free Android app that recommends movies, TV series, books, and video games from a
+  Tonight is a free Android app that recommends movies, TV series, books, and video games from a
   sentence of plain description, rather than from a genre menu.
 examples:
   - cosy fantasy, nothing scary
@@ -31,7 +31,7 @@ type never leave your phone.
 
 ## Where the data comes from
 
-Vibezzzz displays metadata from public APIs, cached into a static catalog that is rebuilt weekly. The
+The app displays metadata from public APIs, cached into a static catalog that is rebuilt weekly. The
 app makes **no per-search request** to any of them: it queries only its own local copy. Attribution
 for each source is displayed inside the app.
 
@@ -45,7 +45,7 @@ This product uses the TMDB API but is not endorsed or certified by TMDB.
 
 ## How it pays for itself
 
-Vibezzzz is free, carries no advertising, and sells nothing. When you choose to open a title on a
+The app is free, carries no advertising, and sells nothing. When you choose to open a title on a
 streaming service or in a store, that link may earn a commission.
 
 **Title rankings are never affected by commissions.** Results are ordered by how well a title matches
@@ -68,5 +68,5 @@ Android, via Google Play. iOS is planned after the Android release.
 
 ## Contact
 
-Vibezzzz is built by one independent developer. Questions about privacy, licensing, or the affiliate
+The app is built by one independent developer. Questions about privacy, licensing, or the affiliate
 programme: **[talamit2001@gmail.com](mailto:talamit2001@gmail.com)**.

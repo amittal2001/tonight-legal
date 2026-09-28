@@ -1,12 +1,12 @@
-title: Vibezzzz
+title: Tonight
 tagline: Describe a vibe. Get movies, shows, books, and games that match.
 description: >-
-  Vibezzzz is a free Android app that recommends movies, TV series, books, and
+  Tonight is a free Android app that recommends movies, TV series, books, and
   video games from a sentence of plain description. All matching runs on your
   device.
 
 url: https://amittal2001.github.io
-baseurl: /vibezzzz-legal
+baseurl: /tonight-legal
 contact_email: talamit2001@gmail.com
 
 # No theme: `_layouts/default.html` and `assets/css/style.css` are the whole design,
@@ -23,9 +23,9 @@ defaults:
 # This site is three static pages of prose. There are no posts and no collections.
 #
 # Each page sets its own `permalink`, so the published URLs are exactly:
-#   https://amittal2001.github.io/vibezzzz-legal/
-#   https://amittal2001.github.io/vibezzzz-legal/privacy/
-#   https://amittal2001.github.io/vibezzzz-legal/disclosure/
+#   https://amittal2001.github.io/tonight-legal/
+#   https://amittal2001.github.io/tonight-legal/privacy/
+#   https://amittal2001.github.io/tonight-legal/disclosure/
 # Those URLs are filed with Google Play, the App Store, TMDB, IGDB, and every
 # affiliate network. Do not change a permalink once it has been submitted anywhere.
 

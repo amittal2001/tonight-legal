@@ -3,19 +3,19 @@ title: Privacy Policy
 permalink: /privacy/
 updated: 25 September 2026
 description: >-
-  Vibezzzz collects nothing about you. There is no account, no analytics, and no server of ours to
+  The Tonight app collects nothing about you. There is no account, no analytics, and no server of ours to
   send anything to. What you type never leaves your phone.
 ---
 
-> **The short version: Vibezzzz collects nothing about you. There is no account, no analytics, and no
+> **The short version: the Tonight app collects nothing about you. There is no account, no analytics, and no
 > server of ours to send anything to. What you type never leaves your phone.**
 
-This policy covers the Vibezzzz Android app and this website. It is written to describe the app that
+This policy covers the Tonight Android app and this website. It is written to describe the app that
 is actually shipped, and it is updated whenever that changes.
 
 ## We operate no servers and gather no personal data
 
-Vibezzzz has no backend. We do not run a service that receives your data, so there is nothing for us
+The app has no backend. We do not run a service that receives your data, so there is nothing for us
 to store, profile, sell, or hand over. Specifically, the app does not collect or transmit:
 
 - your name, email address, phone number, or any account credentials — it has no accounts;
@@ -84,7 +84,7 @@ which person, and not which search. A broad mood category is not enough to recon
 
 The app contains no crash-reporting SDK. If your device reports a crash, that happens at the operating
 system level through Google Play, under your Android settings and Google's policies, not through
-anything in this app. Those reports contain no user content from Vibezzzz.
+anything in this app. Those reports contain no user content from the app.
 
 ## This website
 
@@ -96,7 +96,7 @@ receive no visitor data.
 
 ## Children
 
-Vibezzzz is not directed to children under 13 and is not enrolled in any children's programme on the
+The app is not directed to children under 13 and is not enrolled in any children's programme on the
 app stores. Because the app collects no personal data at all, it collects none from children either.
 
 ## Your control

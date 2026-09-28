@@ -1,14 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Vibezzzz">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Tonight">
+  <!-- The Tonight mark: a waveform Z, on the same dark plate the Android launcher icon
+       uses. This is the THIRD hand-maintained copy of the geometry, after
+       lib/ui/common/logo.dart in the app and tool/make_logo_assets.py in the pipeline
+       repo, and it is the one no contract test can reach, because it lives in a
+       different repository. logo.dart is the source of truth; every number below is one
+       of its unit coordinates times 32:
+
+         stroke width  2 x 0.060 x 32 = 3.84, round caps and joins
+         top bar       (0.28, 0.200) to (0.72, 0.200)
+         bottom bar    (0.28, 0.800) to (0.72, 0.800)
+         rise          cubic (0.710, 0.360) (0.545, 0.395) (0.455, 0.605) (0.290, 0.640)
+         plate radius  0.225 x 32 = 7.2
+
+       The plate gradient runs top left to bottom right and the mark's runs bottom left
+       to top right, exactly as in BrandAppIcon, so the drawn mark and the installed
+       icon are lit from the same direction. If the mark ever changes, it changes in
+       four places and this is the one that will be forgotten. -->
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#6d5ce7"/>
-      <stop offset="1" stop-color="#3fb0c9"/>
+    <linearGradient id="plate" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#221B1E"/>
+      <stop offset="0.5" stop-color="#14121B"/>
+      <stop offset="1" stop-color="#1A182B"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="32" x2="32" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C98A2E"/>
+      <stop offset="1" stop-color="#FFDD96"/>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="8" fill="url(#g)"/>
-  <g fill="#fff">
-    <rect x="8" y="13" width="3.2" height="6" rx="1.6"/>
-    <rect x="14.4" y="9" width="3.2" height="14" rx="1.6"/>
-    <rect x="20.8" y="11.5" width="3.2" height="9" rx="1.6"/>
+  <rect width="32" height="32" rx="7.2" fill="url(#plate)"/>
+  <g fill="none" stroke="url(#mark)" stroke-width="3.84" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.96 6.4H23.04"/>
+    <path d="M8.96 25.6H23.04"/>
+    <path d="M22.72 11.52C17.44 12.64 14.56 19.36 9.28 20.48"/>
   </g>
 </svg>

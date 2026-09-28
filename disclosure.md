@@ -3,14 +3,14 @@ title: Affiliate Disclosure
 permalink: /disclosure/
 updated: 25 September 2026
 description: >-
-  Vibezzzz earns a commission on some of the links it shows. What it recommends is never affected by
+  The Tonight app earns a commission on some of the links it shows. What it recommends is never affected by
   that.
 ---
 
-> **Vibezzzz earns a commission on some of the links it shows. What it recommends is never affected by
+> **The Tonight app earns a commission on some of the links it shows. What it recommends is never affected by
 > that.**
 
-Vibezzzz is free, shows no advertising, and sells nothing. It is funded by affiliate links: when you
+The app is free, shows no advertising, and sells nothing. It is funded by affiliate links: when you
 choose to open a title on a streaming service or in a store, that service may pay us a referral fee
 if you subscribe, rent, or buy. It costs you nothing extra, and the price you pay is the same as if
 you had gone there directly.

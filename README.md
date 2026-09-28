@@ -1,24 +1,24 @@
-# vibezzzz-legal
+# tonight-legal
 
-The public pages for the **Vibezzzz** Android app, served by GitHub Pages:
+The public pages for the **Tonight** Android app, served by GitHub Pages:
 
 | Page | URL |
 |---|---|
-| Landing page | https://amittal2001.github.io/vibezzzz-legal/ |
-| Privacy policy | https://amittal2001.github.io/vibezzzz-legal/privacy/ |
-| Affiliate disclosure | https://amittal2001.github.io/vibezzzz-legal/disclosure/ |
+| Landing page | https://amittal2001.github.io/tonight-legal/ |
+| Privacy policy | https://amittal2001.github.io/tonight-legal/privacy/ |
+| Affiliate disclosure | https://amittal2001.github.io/tonight-legal/disclosure/ |
 
 Those three URLs are submitted to Google Play, the App Store, TMDB, IGDB, and every affiliate network.
 **Do not change a page's `permalink` once it has been submitted anywhere** — amending a filed
 application is a multi-day round trip.
 
-The app itself lives in the private `vibezzzz` repository.
+The app itself lives in the private `tonight` repository.
 
 ## This repo contains prose only
 
 Never add a GitHub Actions workflow or an Actions secret here. This repository is public, which means
 anyone can fork it, every workflow file in it is world-readable, and its Actions logs would be
-world-readable too. Every credential for this project belongs in the private `vibezzzz` repo, and
+world-readable too. Every credential for this project belongs in the private `tonight` repo, and
 nowhere else.
 
 ## Editing

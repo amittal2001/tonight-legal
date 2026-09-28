@@ -6,7 +6,11 @@
     {%- seo -%}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
-    <meta name="theme-color" content="#6d5ce7">
+    <!-- Two, because the page has two backgrounds and this tints the browser chrome
+         around it. One brand colour here was what made the address bar the brightest
+         thing on screen in dark mode. Each value is the matching --bg in style.css. -->
+    <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e0d13" media="(prefers-color-scheme: dark)">
     <!-- No analytics, no tag manager, no web font CDN, no third-party request of any
          kind. A privacy policy that phoned home to a font host would be a poor
          advertisement for the app it describes. The type is the reader's own system
@@ -81,7 +85,12 @@
           <a href="{{ '/disclosure/' | relative_url }}">Affiliate disclosure</a>
         </nav>
         <p class="site-footer__note">
-          {{ site.title }} is built by one independent developer.
+          {%- comment -%}
+            "The {{ site.title }} app", not "{{ site.title }}": the name is also an
+            ordinary adverb, so the bare form reads as a claim about this evening. Same
+            rule as the app's copy -- see the note in its CLAUDE.md.
+          {%- endcomment -%}
+          The {{ site.title }} app is built by one independent developer.
           <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
         </p>
       </div>
