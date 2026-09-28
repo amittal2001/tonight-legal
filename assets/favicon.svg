@@ -5,33 +5,59 @@
        and this file is the one no contract test can reach; the other two are pinned
        against each other by tests/test_dart_logo_contract.py.
 
+       An eclipse and a spark: a ring of light, which is one disc with a second taken out
+       of it, offset down-left along the 45 degree diagonal so the band is thick at the
+       upper right, plus a four-pointed spark set clear of the bright rim. Everything sits
+       on the leading diagonal, including the colour ramp.
+
        Every number below is that geometry times this 32px viewBox, with the launcher's
-       0.88 fill applied (so the unit square maps onto a centred 28.16px box):
-         bars at x 0.140 / 0.290 / 0.440, reaching 0.080 / 0.150 / 0.220 either side of
-         the midline, stroked 2 x 0.050 x 28.16 = 2.816 wide with round caps;
-         the triangle's polyline at (0.595, 0.230), (0.595, 0.770), (0.865, 0.500),
-         filled and stroked 2 x 0.030 x 28.16 = 1.6896 with a round join, which is what
-         rounds its corners to match the caps;
-         plate corner 0.225 x 32 = 7.2.
+       LEGACY_FILL of 0.72 applied, so the unit square maps onto a centred 23.04px box at
+       an offset of 4.48:
+         corona   centre 13.2352, 18.7648   r 8.2944   (unit 0.380, 0.620   r 0.360)
+         eclipse  centre 12.0948, 19.9052   r 7.1424   (unit centre derived: the corona's,
+                  displaced 0.070 / sqrt2 = 0.049497 on each axis)
+         spark    centre 22.6030,  9.3970   reach 3.8016, control pinch 1.52064
+                  (unit centre derived: the corona's, displaced
+                   (0.360 + 0.050 + 0.165) / sqrt2 = 0.406586 on each axis)
+         ramp     0.25 to 0.75 of the box, so 10.24, 10.24 to 21.76, 21.76
+         plate    corner 0.225 x 32 = 7.2; glow at 0.470, 0.530 of the whole canvas,
+                  radius 0.50 x 32 = 16
+       The spark's four cubics are one arm authored once and rotated by quarter turns, the
+       same way both other copies build it, which is what keeps it exactly four-fold.
+
        Re-run `python tool/make_logo_assets.py` in the app repo after any change there,
        then redo the arithmetic here: nothing will tell you this file went stale. -->
   <defs>
-    <linearGradient id="plate" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#221B1E"/><stop offset="0.5" stop-color="#14121B"/><stop offset="1" stop-color="#1A182B"/>
+    <!-- The plate, in the two layers the rasteriser composes: a near-black vertical ramp,
+         then one violet glow behind the eclipse. A single gradient cannot be both. -->
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F1020"/><stop offset="1" stop-color="#05050A"/>
     </linearGradient>
-    <!-- Left to right, dim to bright: the mark reads in that direction and is lit along
-         it, which is also how the baked PNGs are rasterised. -->
-    <linearGradient id="mark" x1="0" y1="16" x2="32" y2="16" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#C98A2E"/><stop offset="1" stop-color="#FFDD96"/>
+    <radialGradient id="glow" cx="15.04" cy="16.96" r="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7209B7" stop-opacity="0.30"/>
+      <stop offset="0.25" stop-color="#7209B7" stop-opacity="0.255"/>
+      <stop offset="0.75" stop-color="#7209B7" stop-opacity="0.047"/>
+      <stop offset="1" stop-color="#7209B7" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Along the leading diagonal, dim cool to bright warm, because the composition runs
+         that way: a horizontal ramp lights one horn of the ring and leaves the other flat.
+         One gradient for both shapes, so the ramp crosses the mark as a whole. -->
+    <linearGradient id="mark" x1="10.24" y1="10.24" x2="21.76" y2="21.76" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4CC9F0"/><stop offset="0.5" stop-color="#A855F7"/><stop offset="1" stop-color="#F72585"/>
     </linearGradient>
+    <!-- The eclipse is a real hole, not a plate-coloured disc drawn over the corona, so
+         the ring stays a ring if this ever lands on anything but the plate. It has to be a
+         mask rather than one evenodd path: the eclipse pokes out past the corona's rim at
+         the thin end (0.310 + 0.070 > 0.360), which evenodd would fill in as a lune. -->
+    <mask id="eclipse" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+      <circle cx="13.2352" cy="18.7648" r="8.2944" fill="#fff"/>
+      <circle cx="12.0948" cy="19.9052" r="7.1424" fill="#000"/>
+    </mask>
   </defs>
   <rect width="32" height="32" rx="7.2" fill="url(#plate)"/>
-  <g stroke="url(#mark)" stroke-linecap="round" stroke-linejoin="round">
-    <g fill="none" stroke-width="2.816">
-      <path d="M5.8624 13.7472V18.2528"/>
-      <path d="M10.0864 11.776V20.224"/>
-      <path d="M14.3104 9.8048V22.1952"/>
-    </g>
-    <path d="M18.6752 8.3968L18.6752 23.6032L26.2784 16Z" fill="url(#mark)" stroke-width="1.6896"/>
+  <rect width="32" height="32" rx="7.2" fill="url(#glow)"/>
+  <g fill="url(#mark)">
+    <circle cx="13.2352" cy="18.7648" r="8.2944" mask="url(#eclipse)"/>
+    <path d="M22.6030 5.5954C22.6030 7.8764 24.1236 9.3970 26.4046 9.3970C24.1236 9.3970 22.6030 10.9177 22.6030 13.1986C22.6030 10.9177 21.0823 9.3970 18.8014 9.3970C21.0823 9.3970 22.6030 7.8764 22.6030 5.5954Z"/>
   </g>
 </svg>
