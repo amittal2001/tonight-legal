@@ -69,4 +69,4 @@ Android, via Google Play. iOS is planned after the Android release.
 ## Contact
 
 The app is built by one independent developer. Questions about privacy, licensing, or the affiliate
-programme: **[talamit2001@gmail.com](mailto:talamit2001@gmail.com)**.
+programme: **[amittalautomation+tonight@gmail.com](mailto:amittalautomation+tonight@gmail.com)**.
