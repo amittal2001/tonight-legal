@@ -1,22 +1,23 @@
 ---
 title: Privacy Policy
 permalink: /privacy/
-updated: 25 September 2026
+updated: 12 October 2026
 description: >-
-  The Tonight app collects nothing about you. There is no account, no analytics, and no server of ours to
-  send anything to. What you type never leaves your phone.
+  The Tonight app collects nothing about you. There is no account, no analytics, and no server of ours that
+  receives anything about you. What you type never leaves your phone.
 ---
 
 > **The short version: the Tonight app collects nothing about you. There is no account, no analytics, and no
-> server of ours to send anything to. What you type never leaves your phone.**
+> server of ours that receives anything about you. What you type never leaves your phone.**
 
 This policy covers the Tonight Android app and this website. It is written to describe the app that
 is actually shipped, and it is updated whenever that changes.
 
-## We operate no servers and gather no personal data
+## We gather no personal data
 
-The app has no backend. We do not run a service that receives your data, so there is nothing for us
-to store, profile, sell, or hand over. Specifically, the app does not collect or transmit:
+The app has no backend that receives your data. The one thing we run is a small Cloudflare Worker
+that hands out the catalog files; it keeps no logs and stores nothing about the requests it serves.
+So there is nothing for us to store, profile, sell, or hand over. Specifically, the app does not collect or transmit:
 
 - your name, email address, phone number, or any account credentials — it has no accounts;
 - any device, advertising, or installation identifier;
@@ -49,16 +50,19 @@ sent anywhere.
 
 The app talks to exactly three kinds of destination, and never to any of them with your query:
 
-1. **The catalog download.** The app periodically fetches its catalog from GitHub Releases
-   (`github.com` / `objects.githubusercontent.com`). This is an anonymous download of the same file
-   every user receives.
-2. **Artwork.** Posters and backdrops load from TMDB's image CDN (`image.tmdb.org`).
+1. **The catalog download.** The app periodically fetches its catalog from our Cloudflare Worker
+   (`tonight-catalog.tonight-catalog-worker.workers.dev`), which serves it from Cloudflare's storage.
+   Every user receives the same files. Besides the name of the file, the request carries one fixed
+   app key, identical in every copy of the app, so it identifies no one.
+2. **Artwork.** Posters and covers load from the sites that host them: Wikimedia
+   (`upload.wikimedia.org`), TVmaze (`static.tvmaze.com`), Open Library (`covers.openlibrary.org`) and
+   IGDB (`images.igdb.com`). Streaming-service logos load from TMDB's image CDN (`image.tmdb.org`).
 3. **A link you tap.** When you choose to open a title on a streaming service or in a store, the app
    opens that destination in your browser or in that service's own app.
 
 As with any request over the internet, the host you are connecting to can see your IP address and
-general technical details of the connection. Those hosts — GitHub, TMDB, and whichever service you
-chose to open — are independent companies operating under their own privacy policies, which govern
+general technical details of the connection. Those hosts — Cloudflare, the artwork sites above, and
+whichever service you chose to open — are independent companies operating under their own privacy policies, which govern
 what they do with that information. We receive none of it.
 
 Downloading the catalog over a mobile connection requires your explicit consent first, because it is
