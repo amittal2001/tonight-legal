@@ -37,9 +37,13 @@ for each source is displayed inside the app.
 
 | Media | Source |
 |---|---|
-| Movies and TV | [The Movie Database (TMDB)](https://www.themoviedb.org/) — titles, release metadata, artwork, and streaming availability. TMDB's watch-provider data is supplied by [JustWatch](https://www.justwatch.com/). |
+| Movies and TV | [Wikidata](https://www.wikidata.org/) (CC0) — titles, dates, cast and genres. [Wikipedia](https://www.wikipedia.org/) (CC BY-SA 4.0) — the text the app's descriptions are adapted from, and film posters; each title links to its article. [TVmaze](https://www.tvmaze.com/) (CC BY-SA 4.0) — series posters and episode lengths. |
+| Streaming availability | [Streaming Availability API by Movie of the Night](https://www.movieofthenight.com/about/api) in the US, and [TMDB](https://www.themoviedb.org/), whose watch-provider data is supplied by [JustWatch](https://www.justwatch.com/). Service logos come from TMDB. |
 | Video games | [IGDB](https://www.igdb.com/) |
-| Books | [Google Books](https://books.google.com/) |
+| Books | [Open Library](https://openlibrary.org/) (CC0) |
+
+The app's short descriptions are written from these sources, not quoted from them, and the
+Wikipedia-derived ones are shared under the same CC BY-SA 4.0 licence.
 
 This product uses the TMDB API but is not endorsed or certified by TMDB.
 
