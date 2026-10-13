@@ -1,7 +1,7 @@
 ---
 title: Tonight
 hero: true
-heading: Describe a vibe. Get five things to watch, read, or play.
+heading: Describe a vibe. Discover what to watch, read, or play.
 lede: >-
   Tonight is a free Android app that recommends movies, TV series, books, and video games from a
   sentence of plain description, rather than from a genre menu.
