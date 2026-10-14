@@ -1,10 +1,10 @@
 ---
 title: Tonight
 hero: true
-heading: Describe a vibe. Discover what to watch, read, or play.
+heading: Describe a vibe. Discover what to watch, read, play, or listen to.
 lede: >-
-  Tonight is a free Android app that recommends movies, TV series, books, and video games from a
-  sentence of plain description, rather than from a genre menu.
+  Tonight is a free Android app that recommends movies, TV series, books, video games, and albums
+  from a sentence of plain description, rather than from a genre menu.
 examples:
   - cosy fantasy, nothing scary
   - slow-burn sci-fi under two hours
@@ -41,6 +41,7 @@ for each source is displayed inside the app.
 | Streaming availability | [Streaming Availability API by Movie of the Night](https://www.movieofthenight.com/about/api) in the US, and [TMDB](https://www.themoviedb.org/), whose watch-provider data is supplied by [JustWatch](https://www.justwatch.com/). Service logos come from TMDB. |
 | Video games | [IGDB](https://www.igdb.com/) |
 | Books | [Open Library](https://openlibrary.org/) (CC0) |
+| Albums | [Wikidata](https://www.wikidata.org/) (CC0) — titles, dates, performers and genres. [Wikipedia](https://www.wikipedia.org/) (CC BY-SA 4.0) — the text the app's descriptions are adapted from, and album covers; each album links to its article. |
 
 The app's short descriptions are written from these sources, not quoted from them, and the
 Wikipedia-derived ones are shared under the same CC BY-SA 4.0 licence.
